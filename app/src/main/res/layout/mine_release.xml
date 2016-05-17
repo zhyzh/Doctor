@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/title">
+
+        <ImageView style="@style/title.imageview" />
+
+        <EditText
+            style="@style/title.textview"
+            android:text="发布" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="发布农机"
+        android:textSize="26dp"
+        android:textColor="#fff"/>
+    <Button
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:text="发布土地"
+        android:textSize="26dp"
+        android:textColor="#fff"/>
+</LinearLayout>
