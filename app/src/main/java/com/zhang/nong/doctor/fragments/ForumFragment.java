@@ -17,6 +17,6 @@ public class ForumFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.forum,null);
+        return inflater.inflate(R.layout.forum_tei,null);
     }
 }
