@@ -1,4 +1,4 @@
-package com.zhang.nong;
+﻿package com.zhang.nong;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-RadioGroup mRadioGroup;//sadbnasbn
+RadioGroup mRadioGroup;//这是我修改的
 
 ViewPager mViewPager;
 List<Fragment> mList;
