@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-RadioGroup mRadioGroup;
+RadioGroup mRadioGroup;//sadbnasbn
 
 ViewPager mViewPager;
 List<Fragment> mList;
