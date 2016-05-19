@@ -1,4 +1,4 @@
 <resources>
-	<string name="app_name">My Application</string>
-	<string name="wenzi">您好：您的宝贵意见对我们很重要，如果您的建议一经采纳，我们将送出精美的礼品一份！！！</string>
+    <string name="app_name">My Application</string>
+    <string name="wenzi">您好：您的宝贵意见对我们很重要，如果您的建议一经采纳，我们将送出精美的礼品一份！！！</string>
 </resources>
