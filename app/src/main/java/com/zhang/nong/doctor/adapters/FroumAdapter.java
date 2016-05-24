@@ -1,6 +1,8 @@
 package com.zhang.nong.doctor.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.zhang.nong.MainActivity;
 import com.zhang.nong.R;
+import com.zhang.nong.doctor.activity.DemandManActivity;
+import com.zhang.nong.doctor.activity.ForumReplyActivity;
 import com.zhang.nong.doctor.com.java.beans.ForumMyData;
 
 import java.util.List;
@@ -63,7 +68,7 @@ public class FroumAdapter extends BaseAdapter{
         convertView=mInflater.inflate(R.layout.forum_itema,null);
         //确定每一行布局控件中显示的内容
         //先把置顶的内容填充完
-        LinearLayout mLinearLayout= (LinearLayout) convertView.findViewById(R.id.forum_zhidinglayout);
+        final LinearLayout mLinearLayout= (LinearLayout) convertView.findViewById(R.id.forum_zhidinglayout);
         ImageView mZhiImageView= (ImageView) convertView.findViewById(R.id.forum_itema_1);
         TextView mZhiTextView= (TextView) convertView.findViewById(R.id.forum_text_1);
         mZhiTextView.setText(mList.get(position).getTitle());
@@ -94,8 +99,7 @@ public class FroumAdapter extends BaseAdapter{
         mNameTextView.setText(mList.get(position).getUsername());
         mHuinumTextView.setText(mList.get(position).getHuisum());
         mZanTextView.setText(mList.get(position).getZansum());
-        mtimeTextView.setText(mList.get(position).getFatime());
-        mTitleTextView.setText(mList.get(position).getTitle());
+         mTitleTextView.setText(mList.get(position).getTitle());
         mContentTextView.setText(mList.get(position).getContent());
         mPic1ImageView.setImageResource(mList.get(position).getPic1());
         mPic2ImageView.setImageResource(mList.get(position).getPic2());
@@ -119,15 +123,44 @@ public class FroumAdapter extends BaseAdapter{
 //            mPic3ImageView.setVisibility(View.GONE);
             LinearLayout mfeiLinearLayout= (LinearLayout) convertView.findViewById(R.id.forum_feilayout);
             mfeiLinearLayout.setVisibility(View.GONE);
+            mLinearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+                @Override
+                public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+                    //这是单击listv中的组件进行的监听跳转
+//                    Intent intent=new Intent(context, ForumReplyActivity.class);
+                }
+            });
         }
-        switch (position){
-            case 3:
-            mPic3ImageView.setVisibility(View.GONE);
-                break;
-            case 4:
-                mPic1ImageView.setVisibility(View.GONE);
-                mPic3ImageView.setVisibility(View.GONE);
-        }
+//        switch (position){
+//            case 3:
+//            mPic3ImageView.setVisibility(View.GONE);
+//                break;
+//            case 4:
+//                mPic1ImageView.setVisibility(View.GONE);
+//                mPic3ImageView.setVisibility(View.GONE);
+//        }
+        //设置item中用户头像、用户名的的监听事件
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //获取被单击用户id查询出用户信息然后通过activity传值传递到demandmanactivity
+
+                Intent intent=new Intent(context, DemandManActivity.class);
+                context.startActivity(intent);
+
+            }
+        });
+        mNameTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //获取被单击用户id
+                //获取被单击用户id查询出用户信息然后通过activity传值传递到demandmanactivity
+                Intent intent=new Intent(context, DemandManActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
         return convertView;
     }
+
 }

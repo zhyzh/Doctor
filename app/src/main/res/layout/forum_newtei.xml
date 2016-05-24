@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="#d9dada"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageButton
+            android:id="@+id/forum_replyback"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/boss_unipay_icon_back"
+            />
+        <android.support.percent.PercentRelativeLayout
+
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/edittext_forum1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="70%"
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="主题贴"
+                android:textSize="24sp"
+                android:gravity="center"
+
+
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <Button
+            android:id="@+id/forum_fatei"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/applouzhu"
+            android:text="发帖"
+            android:textSize="20sp"
+            />
+
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/forum_newteititle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标题 （必填）"
+        />
+    <EditText
+        android:layout_weight="8"
+        android:id="@+id/forum_newcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="start"
+        android:hint="内容 （必填）"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f5f2f2"
+        android:descendantFocusability="blocksDescendants"
+        >
+        <ImageButton
+            android:id="@+id/forum_location"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/forumplaceholder"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#0000"
+            />
+        <TextView
+            android:layout_toRightOf="@+id/forum_location"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所在位置"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/tupian"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/forumphoto"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#0000"
+            />
+        <ImageButton
+            android:layout_toRightOf="@+id/tupian"
+            android:id="@+id/biaoqing"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/biaoqing"
+            android:background="#0000"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

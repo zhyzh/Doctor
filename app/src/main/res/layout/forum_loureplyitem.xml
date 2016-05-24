@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/forum_loureply_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HXUC2015 :刚看朋友的贴子，还没有一定的知识，主要帖子太多，以前看不到。2016-05-12"
+        />
+
+</LinearLayout>

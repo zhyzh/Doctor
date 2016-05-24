@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/forumreply_newlou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/forum_replyitemage_2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/abcman"
+                android:clickable="true"
+                />
+            <RelativeLayout
+                android:layout_alignTop="@+id/forum_replyitemage_2"
+                android:layout_toRightOf="@+id/forum_replyitemage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/forum_replyusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+
+                    android:text="一个人的梦想ok"
+                    android:clickable="true"
+                    />
+                <ImageButton
+                    android:id="@+id/forum_replylouzhubiao"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/louzhureply"
+                    android:layout_toRightOf="@+id/forum_replyusername"
+                    android:layout_marginLeft="10dp"
+                    android:background="#0000"
+                    />
+                <ImageButton
+                    android:id="@+id/forum_replyban"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+
+                    android:layout_marginRight="52dp"
+
+                    android:src="@drawable/news_froum"
+                    android:focusable="false"
+                    android:background="#0000"
+                    />
+                <ImageButton
+                    android:id="@+id/forum_collect"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:visibility="gone"
+                    android:src="@drawable/collect2"
+                    android:layout_toLeftOf="@+id/forum_replyban"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#0000"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/forum_replyitemage_2"
+                android:layout_alignBottom="@+id/forum_replyitemage_2"
+                >
+                <TextView
+
+                    android:id="@+id/forum_reply_louceng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="第三楼       "
+                    android:visibility="gone"
+
+                    />
+                <TextView
+                    android:id="@+id/forum_replytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016—05-12"
+                    android:textColor="@color/forum_font"
+
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/forum_replytitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="虎吧升级专贴三"
+            android:textSize="24sp"
+            android:clickable="true"
+            />
+        <TextView
+            android:id="@+id/forum_replycontent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="为了吧友升级,专开水经验贴，其他无任何大师们的精华缩写或者截图"
+            
+            android:clickable="true"
+            />
+
+        <ImageView
+            android:id="@+id/forum_replyimage1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/text_forum"
+            android:layout_marginLeft="0dp"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/forum_replyquxiao"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/forum_font">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/forum_loureply_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:text="HXUC2015 :刚看朋友的贴子，还没有一定的知识，主要帖子太多，以前看不到。2016-05-12"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/forum_mowei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="24sp"
+            android:text="暂无更多"
+            android:layout_centerInParent="true"
+
+
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

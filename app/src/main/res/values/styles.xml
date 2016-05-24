@@ -58,4 +58,10 @@
         <item name="android:src">@drawable/bg_next</item>
         <item name="android:layout_marginLeft">250dp</item>
     </style>
+    <style name="corners">
+        <item name="android:bottomLeftRadius">15dp</item>
+        <item name="android:bottomRightRadius">15dp</item>
+        <item name="android:topRightRadius">15dp</item>
+        <item name="android:topLeftRadius">15dp</item>
+    </style>
 </resources>

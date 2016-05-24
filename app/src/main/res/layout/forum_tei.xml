@@ -1,73 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
 
     >
     <LinearLayout
-        android:background="#d9dada"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         >
-        <ImageButton
-            android:id="@+id/forum_imb"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:src="@drawable/boss_unipay_icon_back"
-            />
-        <android.support.percent.PercentRelativeLayout
+        <LinearLayout
+            android:background="#d9dada"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            >
 
-            android:layout_weight="8"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
-            <EditText
-                android:id="@+id/edittext_forum1"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                app:layout_heightPercent="100%"
-                app:layout_widthPercent="70%"
+            <android.support.percent.PercentRelativeLayout
 
+                android:layout_weight="10"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:hint="      附近的人都在搜索"
-                android:background="@null"
+                android:layout_height="match_parent">
+                <EditText
 
-                />
-            <ImageView
-                android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/search"
-                android:layout_alignLeft="@+id/edittext_forum1"
-                />
-        </android.support.percent.PercentRelativeLayout>
+                    android:id="@+id/edittext_forum1"
+                    android:layout_marginLeft="15dp"
 
-        <ImageButton
-            android:id="@+id/forum_writetei"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/contract_"
-            />
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="70%"
+
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:hint="      附近的人都在搜索"
+                    android:background="@null"
+
+                    />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search"
+                    android:layout_alignLeft="@+id/edittext_forum1"
+                    />
+                <ImageButton
+                    android:id="@+id/forum_writetei"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="7%"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="65dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/contract_"
+                    android:background="#0000"
+                    />
+                <ImageButton
+                    android:id="@+id/forum_fragmentteinews"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="7%"
+                    android:layout_alignParentRight="true"
+                    android:layout_toLeftOf="@+id/forum_writetei"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/newstei"
+                    android:background="#0000"
+                    />
+            </android.support.percent.PercentRelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <ListView
+            android:layout_weight="9"
+            android:id="@+id/forum_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+
+            >
+
+        </ListView>
 
 
     </LinearLayout>
-    <ListView
-        android:layout_weight="9"
-        android:id="@+id/forum_listview"
+    <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="0dp">
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/resh2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#0000"
+        />
 
-    </ListView>
 
 
 
 
-
-</LinearLayout>
+</RelativeLayout>

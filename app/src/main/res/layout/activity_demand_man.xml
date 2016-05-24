@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhang.nong.doctor.activity.DemandManActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        >
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/backima"/>
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/abcman"
+        android:layout_alignBottom="@+id/image1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignTop="@+id/image1"
+        android:textSize="30sp"
+        android:textColor="#fcf9f9"
+        />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="昵称："
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_alignTop="@+id/image2"
+        android:layout_toRightOf="@+id/image2"
+        android:textSize="24sp"
+        android:textColor="#000"
+        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image1"
+            android:layout_toRightOf="@id/image2"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical"
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/atention"
+                android:background="#fcfbfb"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加关注"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image1"
+            android:layout_toRightOf="@+id/text1"
+            android:orientation="vertical"
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/newstei"
+                android:background="#fcfbfb"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发消息"
+                />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/forum_damuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/text1"
+        android:text="张三"
+        android:layout_alignTop="@+id/image2"
+        android:textSize="24sp"
+        android:textColor="#fdce0e"
+        />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_weight="0.7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="他的帖子"
+            />
+        <TextView
+            android:id="@+id/forum_teinum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:text="20"
+            />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_next"
+            android:layout_marginRight="10dp"
+            android:background="#0000"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="他的关注"
+            />
+
+        <TextView
+            android:id="@+id/forum_contentionnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:text="20"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_next"
+            android:layout_marginRight="10dp"
+            android:background="#0000"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="0.7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="他的收藏"
+            />
+
+        <TextView
+            android:id="@+id/forum_collectnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:text="20"
+            />
+
+        <ImageView
+            style="@style/right"
+            android:layout_marginLeft="10dp"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+
+</LinearLayout>

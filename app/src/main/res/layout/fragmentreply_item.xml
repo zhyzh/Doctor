@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/forum_itemage_2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/abcman" />
+
+        <TextView
+            android:id="@+id/forum_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/forum_itemage_2"
+            android:layout_toRightOf="@+id/forum_itemage_2"
+            android:clickable="true"
+            android:text="一个人的梦想ok" />
+
+        <TextView
+            android:id="@+id/forum_teitime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/forum_itemage_2"
+            android:layout_toRightOf="@+id/forum_itemage_2"
+            android:text="30分钟前"
+            android:textColor="@color/forum_font" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/forum_replyconobjie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="回复 ***：说的对"
+        android:textSize="16sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/forum_contentitem"
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            style="@style/corners"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:text="回复我的评论：“我评论的内容”"
+            android:background="#d2cfcf"
+            />
+    </LinearLayout>
+
+
+
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/news_froum"
+        android:background="@color/forum_backgru"
+        android:layout_gravity="right"
+        />
+
+</LinearLayout>

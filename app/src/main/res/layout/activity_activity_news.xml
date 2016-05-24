@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.zhang.nong.doctor.activity.ActivityNews">
+    <LinearLayout
+        android:background="#d9dada"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageButton
+            android:id="@+id/forum_replyback"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/boss_unipay_icon_back"
+            />
+        <android.support.percent.PercentRelativeLayout
+
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/edittext_forum1"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="70%"
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="消息"
+                android:textSize="24sp"
+                android:gravity="center"
+
+
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dbdcdc"
+        >
+        <Button
+            android:id="@+id/forum_fragmadnnews"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="聊天"
+            android:onClick="onclick"
+
+            />
+        <Button
+            android:id="@+id/forum_fragmanreply"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="回复"
+            android:onClick="onclick"
+            />
+
+
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/forum_viewnewspager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
