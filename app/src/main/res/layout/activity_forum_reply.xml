@@ -17,6 +17,7 @@
             android:layout_weight="0.7"
             android:layout_height="match_parent"
             android:src="@drawable/boss_unipay_icon_back"
+            android:onClick="onback"
             />
         <android.support.percent.PercentRelativeLayout
 

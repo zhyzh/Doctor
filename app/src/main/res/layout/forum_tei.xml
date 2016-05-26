@@ -25,13 +25,10 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <EditText
-
-                    android:id="@+id/edittext_forum1"
+                    android:id="@+id/searchforumedittext"
                     android:layout_marginLeft="15dp"
-
                     app:layout_heightPercent="100%"
                     app:layout_widthPercent="70%"
-
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:hint="      附近的人都在搜索"
@@ -39,6 +36,7 @@
 
                     />
                 <ImageView
+                    android:id="@+id/forumsearch_ima"
                     android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,6 +85,8 @@
 
     </LinearLayout>
     <ImageButton
+
+        android:id="@+id/forum_reflesh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -95,6 +95,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
         android:background="#0000"
+
         />
 
 

@@ -22,6 +22,7 @@ import java.util.List;
 
 
 import com.zhang.nong.R;
+import com.zhang.nong.doctor.MyService.ReqService;
 import com.zhang.nong.doctor.adapters.Froum_newsAdapter;
 
 import com.zhang.nong.doctor.fragments.Forum_fragmentnews;
@@ -32,6 +33,7 @@ import java.util.List;
 
 
 public class ActivityNews extends AppCompatActivity {
+
     //声明顶部导航的两个布局
 
     //声明两个布局的按钮
@@ -105,5 +107,9 @@ public class ActivityNews extends AppCompatActivity {
                 break;
 
         }
+    }
+
+    public void onback(View view) {
+        onBackPressed();
     }
 }

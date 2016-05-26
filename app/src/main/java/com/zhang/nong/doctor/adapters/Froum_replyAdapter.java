@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.zhang.nong.R;
 import com.zhang.nong.doctor.activity.DemandManActivity;
 import com.zhang.nong.doctor.com.java.beans.Reply;
+import com.zhang.nong.doctor.com.java.beans.Zhutei;
 
 import java.util.List;
 
@@ -32,21 +33,32 @@ public class Froum_replyAdapter extends BaseAdapter {
     List<Reply> mList;
     //layoutinflater主要是用来初始化布局文件，而findviewbyid主要用来初始化布局中的控件
     LayoutInflater mInflater;
+    Zhutei mZhutei;
 
-    //简单的回调函数
-//    Mgetlist mgetlist;
-//    public interface Mgetlist{public abstract void getadapter(ListView view);}
+    //简单的回调函数，这个回调回复按钮
+    Mgetlist mgetlist;
+    public interface Mgetlist{
+        //这个抽象方法是回调回复按钮
+        public abstract void getadapter(ImageButton imageButton);
+        //回调收藏按钮
+        public abstract void getshoucang(ImageButton imageButton);
+        //考虑到回复非楼主的情况要在activity中实现
 
 
 
-    public Froum_replyAdapter(Context context, List<Reply> mList) {
+    }
+
+
+
+    public Froum_replyAdapter(Context context, List<Reply> mList, Zhutei zhutei) {
         this.context = context;
         this.mList = mList;
         mInflater=LayoutInflater.from(context);//初始化
+        mZhutei=zhutei;
 
-//        //初始化mgelist
-//        Activity activity= (Activity) context;
-//        mgetlist= (Mgetlist) activity;
+        //初始化mgelist、接口
+        Activity activity= (Activity) context;
+        mgetlist= (Mgetlist) activity;
     }
 
     @Override
@@ -111,14 +123,16 @@ ImageButton mlouzImageButton= (ImageButton) convertView.findViewById(R.id.forum_
        // 楼层的回复
         TextView mreplyloTextView= (TextView) convertView.findViewById(R.id.forum_loureply_textview);
 
-        if (mList.get(position).getUserName().equals("true")){
+        if (mList.get(position).getFloorNum()==1){
             //如果传值的话
             //这里先写死
+            //这里是放主贴的
             handimageView.setImageResource(R.drawable.abcman);
-            mforumTextView.setText("如果一个人的梦想ok");
-            mtimeTextView.setText("2016-5-12");
-            mreplytetleTextView.setText("虎吧升级专贴三");
-            mcontentTextView.setText("为了吧友升级,专开水经验贴，其他无任何大师们的精华缩写或者截图");
+            mforumTextView.setText(mZhutei.getUserName());
+            mtimeTextView.setText(mZhutei.getDate().toString());
+            mreplytetleTextView.setText(mZhutei.getTitle());
+            mcontentTextView.setText(mZhutei.getZnei());
+            //下边的图片还没有三方存储、这是根据zhutei的id去zhutei图片表查询的
             mreplyImageView.setImageResource(R.drawable.test_forum2);
             //隐藏回复
             mreplyloTextView.setVisibility(View.GONE);
@@ -129,10 +143,13 @@ ImageButton mlouzImageButton= (ImageButton) convertView.findViewById(R.id.forum_
 
             mlouzbiaoImageButton.setVisibility(View.VISIBLE);
             mcollectImageButton.setVisibility(View.VISIBLE);
-            //隐藏楼主标志
-            mlouzImageButton.setVisibility(View.GONE);
-            //隐藏回复
-            mreplyloTextView.setVisibility(View.GONE);
+            //这里先假设楼主的id为1，获取网络数据后需要传值
+            if (mList.get(position).getUserId()!=1) {
+                //隐藏楼主标志
+                mlouzImageButton.setVisibility(View.GONE);
+                //隐藏回复
+                mreplyloTextView.setVisibility(View.GONE);
+            }
             //隐藏标题
             mreplytetleTextView.setVisibility(View.GONE);
 
@@ -168,9 +185,7 @@ ImageButton mlouzImageButton= (ImageButton) convertView.findViewById(R.id.forum_
             //隐藏楼层
             LinearLayout mnewlouLinearLayout= (LinearLayout) convertView.findViewById(R.id.forumreply_newlou);
             mnewlouLinearLayout.setVisibility(View.GONE);
-            //显示暂无更多
-            TextView mTextView= (TextView) convertView.findViewById(R.id.forum_mowei);
-            mTextView.setVisibility(View.VISIBLE);
+
 
         }
 //        mgetlist.getadapter(mreplylouListView);
@@ -194,6 +209,12 @@ ImageButton mlouzImageButton= (ImageButton) convertView.findViewById(R.id.forum_
                 context.startActivity(intent);
             }
         });
+        //设置item中的回复图标的单击事件，因为要设置碎片中的控件的焦点，所以这里使用回调函数进行传值
+        mgetlist.getadapter(mhuifuImageButton);
+        //回调收藏按钮
+        mgetlist.getshoucang(mcollectImageButton);
+
+
 
 
 

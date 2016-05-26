@@ -2,13 +2,16 @@ package com.zhang.nong.doctor.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zhang.nong.MainActivity;
@@ -16,6 +19,7 @@ import com.zhang.nong.R;
 import com.zhang.nong.doctor.activity.DemandManActivity;
 import com.zhang.nong.doctor.activity.ForumReplyActivity;
 import com.zhang.nong.doctor.com.java.beans.ForumMyData;
+import com.zhang.nong.doctor.com.java.beans.Zhutei;
 
 import java.util.List;
 
@@ -25,15 +29,17 @@ import java.util.List;
  */
 public class FroumAdapter extends BaseAdapter{
     Context context;
-    List<ForumMyData> mList;
+    List<Zhutei> mList;
     //layoutinflater主要是用来初始化布局文件，而findviewbyid主要用来初始化布局中的控件
 
     LayoutInflater mInflater;
+    ListView mListView;
 
-    public FroumAdapter(Context context, List<ForumMyData> mList) {
+    public FroumAdapter(Context context, List<Zhutei> mList,ListView listView) {
         this.context = context;
         this.mList = mList;
         mInflater=LayoutInflater.from(context);//初始化
+        mListView=listView;
     }
 
     @Override
@@ -61,7 +67,7 @@ public class FroumAdapter extends BaseAdapter{
     * */
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         //视图缓存暂时没做
         //确定每一行的布局，并且把对应的数据显示到布局中
         //第一个参数：要显示的布局索引，第二个参数，包含每一行布局的父布局，这里直接用null
@@ -72,6 +78,7 @@ public class FroumAdapter extends BaseAdapter{
         ImageView mZhiImageView= (ImageView) convertView.findViewById(R.id.forum_itema_1);
         TextView mZhiTextView= (TextView) convertView.findViewById(R.id.forum_text_1);
         mZhiTextView.setText(mList.get(position).getTitle());
+        //这里没做好根据图片的数量进行显示1/2/3
 
 
 
@@ -95,55 +102,40 @@ public class FroumAdapter extends BaseAdapter{
         ImageView mPic2ImageView= (ImageView) convertView.findViewById(R.id.forum_image2);
         ImageView mPic3ImageView= (ImageView) convertView.findViewById(R.id.forum_image3);
         //把内容填冲到具体的布局中
-        mImageView.setImageResource(mList.get(position).getManimage());
-        mNameTextView.setText(mList.get(position).getUsername());
-        mHuinumTextView.setText(mList.get(position).getHuisum());
-        mZanTextView.setText(mList.get(position).getZansum());
+        mImageView.setImageResource(R.drawable.abcman);
+        mNameTextView.setText(mList.get(position).getUserName());
+        mHuinumTextView.setText(mList.get(position).getHui());
+        mZanTextView.setText(mList.get(position).getZan());
          mTitleTextView.setText(mList.get(position).getTitle());
-        mContentTextView.setText(mList.get(position).getContent());
-        mPic1ImageView.setImageResource(mList.get(position).getPic1());
-        mPic2ImageView.setImageResource(mList.get(position).getPic2());
-        mPic3ImageView.setImageResource(mList.get(position).getPic3());
+        mContentTextView.setText(mList.get(position).getZnei());
+        mtimeTextView.setText(mList.get(position).getDate().toString());
+
         //根据是否置顶进行修改显示部分
-        if (mList.get(position).getZhiding()){
+        if (mList.get(position).getZhiding().equals("true")){
             //显示置顶部分
             mLinearLayout.setVisibility(View.VISIBLE);
-//            mZhiImageView.setVisibility(View.VISIBLE);
-//            mZhiTextView.setVisibility(View.VISIBLE);
-            //隐藏非置顶的布局
-//            mImageView.setVisibility(View.GONE);
-//            mNameTextView.setVisibility(View.GONE);
-//            mHuinumTextView.setVisibility(View.GONE);
-//            mZanTextView.setVisibility(View.GONE);
-//            mtimeTextView.setVisibility(View.GONE);
-//            mTitleTextView.setVisibility(View.GONE);
-//            mContentTextView.setVisibility(View.GONE);
-//            mPic1ImageView.setVisibility(View.GONE);
-//            mPic2ImageView.setVisibility(View.GONE);
-//            mPic3ImageView.setVisibility(View.GONE);
+
             LinearLayout mfeiLinearLayout= (LinearLayout) convertView.findViewById(R.id.forum_feilayout);
             mfeiLinearLayout.setVisibility(View.GONE);
-            mLinearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
-                @Override
-                public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-                    //这是单击listv中的组件进行的监听跳转
+            //这是弃用的布局监听跳转
+//            mLinearLayout.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+//                @Override
+//                public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+//                    //这是单击listv中的组件进行的监听跳转
 //                    Intent intent=new Intent(context, ForumReplyActivity.class);
-                }
-            });
+//                    context.startActivity(intent);
+//                }
+//
+//            });
         }
-//        switch (position){
-//            case 3:
-//            mPic3ImageView.setVisibility(View.GONE);
-//                break;
-//            case 4:
-//                mPic1ImageView.setVisibility(View.GONE);
-//                mPic3ImageView.setVisibility(View.GONE);
-//        }
+        //把监听事件进行封装
+        initJianting(context,position);
         //设置item中用户头像、用户名的的监听事件
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //获取被单击用户id查询出用户信息然后通过activity传值传递到demandmanactivity
+                mList.get(position).getUserId();
 
                 Intent intent=new Intent(context, DemandManActivity.class);
                 context.startActivity(intent);
@@ -155,12 +147,39 @@ public class FroumAdapter extends BaseAdapter{
             public void onClick(View v) {
                 //获取被单击用户id
                 //获取被单击用户id查询出用户信息然后通过activity传值传递到demandmanactivity
+                mList.get(position).getUserId();
                 Intent intent=new Intent(context, DemandManActivity.class);
                 context.startActivity(intent);
             }
         });
+        //设置帖子的监听事件
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //跳转之前需要联网获取数据
+                mList.get(position);
+
+                //把贴的id、当前的帖子对象传值给需要跳转的界面
+                //使用bundle进行页面传值
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("zhutei",mList.get(position));
+
+                //界面跳转
+                Intent intent=new Intent(context,ForumReplyActivity.class);
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+//                startActivityForResult(intent,1);
+
+            }
+        });
+
 
         return convertView;
     }
+
+    private void initJianting(Context context, int position) {
+
+    }
+
 
 }

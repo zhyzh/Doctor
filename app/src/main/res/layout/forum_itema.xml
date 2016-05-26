@@ -67,47 +67,62 @@
                 android:clickable="true"
                 android:text="一个人的梦想ok" />
 
-            <TextView
-                android:id="@+id/huifunum"
+
+
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/forum_itemage_2"
-                android:layout_marginRight="10dp"
-                android:text="7451"
-                android:textColor="@color/forum_font" />
+                android:layout_marginRight="100dp"
+                >
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/good"
+                    android:background="#0000"
 
-            <ImageButton
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/forum_itemage_2"
-                android:layout_marginRight="50dp"
-                android:src="@drawable/news"
-                android:background="#0000"
+                    />
+                <TextView
+                    android:id="@+id/forum_zannum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="35"
+                    android:textColor="@color/forum_font" />
 
-                />
-
-            <TextView
-                android:id="@+id/forum_zannum"
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/forum_itemage_2"
-                android:layout_marginRight="90dp"
-                android:text="35"
-                android:textColor="@color/forum_font" />
 
-            <ImageButton
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/forum_itemage_2"
-                android:layout_marginRight="120dp"
-                android:src="@drawable/good"
-                android:background="#0000"
+                >
 
-                />
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignTop="@+id/forum_itemage_2"
+                    android:src="@drawable/newsrep"
+                    android:background="#0000"
+
+
+                    />
+                <TextView
+                    android:id="@+id/huifunum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="7451"
+                    android:textColor="@color/forum_font" />
+
+            </LinearLayout>
+
+
 
             <TextView
                 android:id="@+id/forum_teitime"
@@ -138,7 +153,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -148,6 +163,9 @@
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 android:src="@drawable/text_forum"
+                android:layout_marginLeft="10dp"
+
+
 
                 />
 
@@ -157,7 +175,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
-                android:src="@drawable/test_forum2" />
+                android:src="@drawable/test_forum2"
+                android:layout_marginLeft="10dp"
+                />
 
             <ImageView
                 android:id="@+id/forum_image3"
@@ -165,7 +185,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
-                android:src="@drawable/text_forumtow" />
+                android:src="@drawable/text_forumtow"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
         </LinearLayout>
     </LinearLayout>
 

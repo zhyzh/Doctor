@@ -56,10 +56,8 @@
                     android:layout_height="32dp"
                     android:layout_alignParentRight="true"
                     android:visibility="gone"
-
                     android:layout_marginRight="52dp"
-
-                    android:src="@drawable/news_froum"
+                    android:src="@drawable/newsrep"
                     android:focusable="false"
                     android:background="#0000"
                     />
@@ -158,21 +156,7 @@
         android:layout_alignParentRight="true"
         android:text="HXUC2015 :刚看朋友的贴子，还没有一定的知识，主要帖子太多，以前看不到。2016-05-12"
         />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/forum_mowei"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="24sp"
-            android:text="暂无更多"
-            android:layout_centerInParent="true"
 
-
-            />
-    </RelativeLayout>
 
 
 

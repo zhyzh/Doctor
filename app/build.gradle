@@ -24,5 +24,7 @@ dependencies {
 	testCompile 'junit:junit:4.12'
 	compile 'com.android.support:appcompat-v7:23.3.0'
 	compile 'com.android.support:percent:23.3.0'
-
+	compile 'org.xutils:xutils:3.3.34'
+	compile 'com.google.code.gson:gson:2.6.2'
+	compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
 }

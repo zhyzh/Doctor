@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhang.nong">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".doctor.httpXutils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,11 +18,31 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".doctor.activity.ForumReplyActivity" />
-        <activity android:name=".doctor.activity.ForumnewteiActivity" />
-        <activity android:name=".doctor.activity.ActivityNews"></activity>
-        <activity android:name=".doctor.activity.DemandManActivity"></activity>
+        <activity android:name=".doctor.activity.ForumnewteiActivity"
+            android:windowSoftInputMode="adjustResize"
+            >
+
+        </activity>
+        <activity android:name=".doctor.activity.ActivityNews">
+
+        </activity>
+        <activity android:name=".doctor.activity.DemandManActivity">
+
+        </activity>
+        <activity android:name=".doctor.httpXutils.HttpXtulsActivity">
+
+
+        </activity>
+        <service android:name="com.zhang.nong.doctor.MyService.ReqService"
+            android:enabled="true"
+            android:exported="true"
+            >
+
+        </service>
     </application>
+
 
 </manifest>
