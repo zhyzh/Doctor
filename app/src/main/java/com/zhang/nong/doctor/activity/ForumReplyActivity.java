@@ -128,6 +128,8 @@ public class ForumReplyActivity extends AppCompatActivity implements Froum_reply
                 //获 取焦点还要弹出键盘
                 InputMethodManager m = (InputMethodManager) mEditText.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                 m.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+//                InputMethodManager mInputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+//                mInputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
 
             }
         });
@@ -263,6 +265,9 @@ public class ForumReplyActivity extends AppCompatActivity implements Froum_reply
     public void onback(View view) {
         //单击返回之前的界面
         onBackPressed();
+        //收回键盘
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(mEditText.getWindowToken(),0);
     }
 
     @Override
