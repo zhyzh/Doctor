@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="#d9dada"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        >
+        <ImageButton
+            android:id="@+id/forum_replyback"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="match_parent"
+            android:src="@drawable/boss_unipay_icon_back"
+            android:onClick="onback"
+            />
+        <android.support.percent.PercentRelativeLayout
+
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/forum_userinfoedit"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="70%"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:hint="主题贴"
+                android:textSize="24sp"
+                android:gravity="center"
+
+                />
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/forum_UserInfolistview"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>
+
+
+</LinearLayout>

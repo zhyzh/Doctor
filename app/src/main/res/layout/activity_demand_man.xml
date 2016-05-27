@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zhang.nong.doctor.activity.DemandManActivity">
+    android:descendantFocusability="blocksDescendants"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -98,9 +99,12 @@
         </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/forum_usertei"
         android:layout_weight="0.7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:onClick="onclickDemand"
+
         >
         <TextView
             android:layout_width="wrap_content"
@@ -128,9 +132,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/forum_contentobjict"
         android:layout_weight="0.7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:onClick="onclickDemand"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -158,9 +164,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/forum_collectobject"
         android:layout_weight="0.7"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:onClick="onclickDemand"
         >
         <TextView
             android:layout_width="wrap_content"

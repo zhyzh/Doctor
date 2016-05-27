@@ -50,6 +50,7 @@
             android:src="@drawable/applouzhu"
             android:text="发帖"
             android:textSize="20sp"
+            android:onClick="newsTei"
             />
 
 

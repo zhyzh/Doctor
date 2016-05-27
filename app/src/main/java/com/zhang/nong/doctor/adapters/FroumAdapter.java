@@ -135,9 +135,14 @@ public class FroumAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 //获取被单击用户id查询出用户信息然后通过activity传值传递到demandmanactivity
-                mList.get(position).getUserId();
+//                mList.get(position).getUserId();
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("userid",mList.get(position).getUserId());
+
+
 
                 Intent intent=new Intent(context, DemandManActivity.class);
+                intent.putExtras(bundle);
                 context.startActivity(intent);
 
             }
@@ -147,8 +152,15 @@ public class FroumAdapter extends BaseAdapter{
             public void onClick(View v) {
                 //获取被单击用户id
                 //获取被单击用户id查询出用户信息然后通过activity传值传递到demandmanactivity
-                mList.get(position).getUserId();
+
+//                mList.get(position).getUserId();
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("userid",mList.get(position).getUserId());
+
+
+
                 Intent intent=new Intent(context, DemandManActivity.class);
+                intent.putExtras(bundle);
                 context.startActivity(intent);
             }
         });

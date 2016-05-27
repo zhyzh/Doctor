@@ -206,6 +206,9 @@ public class ForumReplyActivity extends AppCompatActivity implements Froum_reply
         params.addQueryStringParameter("biaoname", "reply");
         params.addQueryStringParameter("req", "demand");
         params.addQueryStringParameter("sum", "1");
+        String id=zhutei.getFirstcommentId()+"";
+        Log.e("获取的zhuteiid是",id);
+        params.addQueryStringParameter("id", id);
         //第二步：开始请求，设置请求方式，同时实现回调函数，这是异步操作
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
