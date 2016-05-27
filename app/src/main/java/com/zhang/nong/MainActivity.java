@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    RadioGroup mRadioGroup;//这是我修改的
+    RadioGroup mRadioGroup;
 
     ViewPager mViewPager;
     List<Fragment> mList;

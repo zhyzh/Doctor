@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/title_color"
+			android:orientation="horizontal">
+
+			<ImageView
+				android:id="@+id/iv_agricultural_machinery_back"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:src="@drawable/boss_unipay_icon_back"
+				/>
+
+			<TextView
+				android:id="@+id/tv_agricultural_machinery_title"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="4"
+				android:gravity="center"
+				android:text="农机服务"
+				android:textSize="20sp"/>
+
+			<ImageView
+				android:id="@+id/iv_agricultural_machinery_publish"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="5dp"
+				android:layout_weight="1"
+				android:src="@drawable/i_74"
+				/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			>
+
+			<TextView
+				android:id="@+id/tv_agricultural_machinery_authour_publish"
+				android:layout_width="0dp"
+				android:layout_height="30dp"
+				android:layout_marginLeft="15dp"
+				android:layout_weight="3"
+				android:text="农机主信息发布"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				/>
+
+			<TextView
+				android:id="@+id/tv_agricultural_machinery_more"
+				android:layout_width="0dp"
+				android:layout_height="30dp"
+				android:layout_weight="2"
+				android:gravity="center"
+				android:text="更多..."
+				android:textColor="@android:color/black"
+				android:textSize="20sp"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<ListView
+		android:id="@+id/lv_home_agricultural_machinery_list"
+
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp">
+
+	</ListView>
+
+</LinearLayout>

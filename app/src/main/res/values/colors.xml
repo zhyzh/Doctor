@@ -9,4 +9,6 @@
     <color name="forum_font">#a19f9f</color>
     <color name="forum_sen">#f9f8f8</color>
     <color name="forum_backgru">#f9f9f9</color>
+    <color name="title_color">#FF59C904</color>
+    <color name="nearby_pro">#FF4BA9EC</color>
 </resources>
