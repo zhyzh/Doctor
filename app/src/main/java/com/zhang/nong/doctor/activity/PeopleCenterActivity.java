@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.zhang.nong.R;
 import com.zhang.nong.doctor.adapters.UpdateAdapter;
+import com.zhang.nong.doctor.adapters.UpdateAdapter2;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 import com.zhang.nong.doctor.com.java.beans.User;
 
@@ -27,7 +28,7 @@ public class PeopleCenterActivity extends Activity {
     List<MyDataaa> mList = null;
     //第二步：找每一行视图
     //第三步：确定适配器：万能适配器：BaseAdapter
-    UpdateAdapter mAdapter;
+    UpdateAdapter2 mAdapter;
     ListView mListView;
     User user;
 
@@ -44,7 +45,7 @@ public class PeopleCenterActivity extends Activity {
       //  mTextView.setText(user.getUserName());
 
         initData();//自定义初始化的方法
-        mAdapter = new UpdateAdapter(PeopleCenterActivity.this, mList);
+        mAdapter = new UpdateAdapter2(PeopleCenterActivity.this, mList);
         mListView.setAdapter(mAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

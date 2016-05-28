@@ -41,7 +41,6 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Created by XCF on 2016/5/12.
  */
@@ -85,22 +84,18 @@ public class ForumFragment extends Fragment {
             Log.e("mlist服务的", "是" + mlist);
 //            show(myService.getservice());
 
-
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
             //意外情况发生，导致服务突然中断，回调的方法，例如服务抛出异常，或者系统杀死服务进程
-
         }
     };
-
 
     //回调：简单的观察者模式
     public interface ListItemClick {
         public abstract void setOnListItemClickListener(String text);
     }
-
 
     @Nullable
     @Override
@@ -118,18 +113,13 @@ public class ForumFragment extends Fragment {
         //刷新按钮的单击事件
         initRelesh();
 
-
         mListView = (ListView) mView.findViewById(R.id.forum_listview);
         initData();
 //        //应该放在获取数据的异步操作中
 //        froumAdapter = new FroumAdapter(getActivity(), mlist, mListView);
 //        mListView.setAdapter(froumAdapter);
         //查看帖子的监听事件
-
-
         return mView;
-
-
     }
 
     private void initRelesh() {
@@ -143,11 +133,8 @@ public class ForumFragment extends Fragment {
                 initData();
                 //刷新布局
                 froumAdapter.notifyDataSetChanged();
-
-
             }
         });
-
     }
 
     //初始化控件
@@ -164,8 +151,6 @@ public class ForumFragment extends Fragment {
         mrefleshImageButton = (ImageButton) mView.findViewById(R.id.forum_reflesh);
         //初始化获取网络数据类的对象
         replydemand = new ReplyDemand();
-
-
     }
 
     private void initEfditext() {
@@ -173,7 +158,6 @@ public class ForumFragment extends Fragment {
         mseachEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
@@ -197,12 +181,10 @@ public class ForumFragment extends Fragment {
                     //失去焦点就显示
                     mseachEditText.setVisibility(View.VISIBLE);
                 }
-
             }
         });
 
     }
-
 
     private void initNews() {
         mnewsImageButton.setOnClickListener(new View.OnClickListener() {
@@ -212,9 +194,7 @@ public class ForumFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
     }
-
 
     //查看帖子的监听事件
     private void intiWrite() {
@@ -226,10 +206,8 @@ public class ForumFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
     }
     //贴吧数据
-
 
     private void initData() {
         //这里极易包类型转换异常
@@ -249,7 +227,6 @@ public class ForumFragment extends Fragment {
         //第三个是个标志位，一般用Service.BIND_AUTO_CREATE,用途是服务没有创建时自动创建服务
         intent = new Intent(getActivity(), ReqService.class);
         getActivity().bindService(intent, conn, Service.BIND_AUTO_CREATE);
-
 
 //        List<Zhutei> list;
 ////        list=replydemand.getTeizhi("1",mPath);
@@ -277,7 +254,6 @@ public class ForumFragment extends Fragment {
                 //应该放在获取数据的异步操作中
                 froumAdapter = new FroumAdapter(getActivity(), mlist, mListView);
                 mListView.setAdapter(froumAdapter);
-
             }
 
             @Override
@@ -296,8 +272,6 @@ public class ForumFragment extends Fragment {
                 //访问完成
             }
         });
-
-
     }
 
     public void show(String te) {

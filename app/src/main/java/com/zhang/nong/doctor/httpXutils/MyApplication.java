@@ -15,7 +15,8 @@ public class MyApplication extends Application {
     //?biaoname=user&req=de&id=**删除(get)
     //?biaoname=user&req=am&a=/b=/c/修改(get)abc是该表属性按顺序的这个需要对数据进行会写
     //?req=login&phone=**&password=***登录(post)
-    private String url = "http://shenwenjie.top/testServlet";
+//    private String url = "http://shenwenjie.top/testServlet";
+    private String url = "http://10.58.250.148:8080/nongboshi_web_001/servlet/ConServlet";
 //    private String url="http://login.guanweiming.top/json/user?action=getAll&username=root&password=root";
     //Application的onCreate早于所有的Activity的onCreate方法
     @Override

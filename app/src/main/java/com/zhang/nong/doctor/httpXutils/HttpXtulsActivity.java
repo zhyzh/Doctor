@@ -33,7 +33,7 @@ import java.util.List;
 
 
 public class HttpXtulsActivity extends AppCompatActivity {
-    private static final String TAG= "XUTILS";
+    private static final String TAG = "XUTILS";
 
     private TextView tv;
     private HttpClient client;

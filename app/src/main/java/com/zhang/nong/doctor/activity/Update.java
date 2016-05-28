@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.zhang.nong.R;
 import com.zhang.nong.doctor.adapters.UpdateAdapter;
+import com.zhang.nong.doctor.adapters.UpdateAdapter2;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 
 import java.util.ArrayList;
@@ -20,18 +21,19 @@ public class Update extends AppCompatActivity {
     List<MyDataaa> mList = null;
     //第二步：找每一行视图
     //第三步：确定适配器：万能适配器：BaseAdapter
-    UpdateAdapter mAdapter;
+    UpdateAdapter2 mAdapter;
     ListView mListView;
     ImageView mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.mine_update_message);
         mListView = (ListView) findViewById(R.id.listview);
         mImageView = (ImageView) findViewById(R.id.imageview);
         initData();//自定义初始化的方法
-        mAdapter = new UpdateAdapter(Update.this, mList);
+        mAdapter = new UpdateAdapter2(Update.this, mList);
         mListView.setAdapter(mAdapter);
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override

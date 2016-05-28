@@ -4,18 +4,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="薛昌峰"
-        android:textSize="18dp" />
 
-
-    <!--<RelativeLayout
+   <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -46,13 +36,13 @@
         android:layout_height="1dp"
         android:background="#0f0" />
 
-    &lt;!&ndash;<Button
-        android:id="@+id/button"
-        android:focusable="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:text="详情" />&ndash;&gt;-->
+   <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:focusable="false"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:text="详情" />-->
 
 </LinearLayout>

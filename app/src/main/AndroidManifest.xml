@@ -14,10 +14,7 @@
         <activity android:name=".doctor.activity.LoginActivity" />
         <activity android:name=".GoodActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:windowSoftInputMode="stateHidden|adjustPan"
         </activity>
         <activity android:name=".doctor.activity.ForumReplyActivity" />
         <activity
@@ -39,7 +36,12 @@
         <activity android:name=".doctor.activity.PeopleCenterActivity" />
         <activity android:name=".doctor.activity.RegisterActivity" />
         <activity android:name=".doctor.activity.SexActivity" />
-        <activity android:name=".doctor.activity.SplashActivity" />
+        <activity android:name=".doctor.activity.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".doctor.activity.Update" />
         <activity android:name=".doctor.activity.UpdateHeadeActivity" />
         <activity android:name=".doctor.activity.UpdateMessageActivity" />
@@ -51,7 +53,9 @@
         <activity android:name=".doctor.activity.Home_agricultural_weather_Activity" />
         <activity android:name=".doctor.activity.Home_day_know_Activity" />
         <activity android:name=".doctor.activity.Home_professor_Activity" />
-        <activity android:name=".doctor.activity.MyActivity" />
+        <activity android:name=".doctor.activity.MyActivity" >
+
+        </activity>
         <activity android:name=".doctor.activity.Nearby_pro_advisory_Activity" />
         <activity android:name=".doctor.activity.TestActivity" />
         <activity android:name=".doctor.activity.UserTeiActivity" />

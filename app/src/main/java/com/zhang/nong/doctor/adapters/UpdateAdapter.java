@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zhang.nong.R;
+import com.zhang.nong.doctor.com.java.beans.Log;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 
 import java.util.List;
@@ -17,13 +18,13 @@ import java.util.List;
  * Created by XCF on 2016/4/25.
  */
 public class UpdateAdapter extends BaseAdapter {
-    List<MyDataaa> mList;
+    List<Log> mList;
     Context mContext;
     //LayoutInflater只要用来初始化布局文件，而findViewById主要用来初始化布局中的控件
     //找到整个布局中的控件，findViewById是找到布局里面单个的id
     LayoutInflater mInflater;
 
-    public UpdateAdapter(Context context, List<MyDataaa> list) {
+    public UpdateAdapter(Context context, List<Log> list) {
         mContext = context;
         mList = list;
         mInflater = LayoutInflater.from(mContext);
@@ -48,7 +49,6 @@ public class UpdateAdapter extends BaseAdapter {
     }
     //缓存布局中的控件
     class ViewHolder{
-        ImageView imageView;
         TextView textView;
     }
 
@@ -70,7 +70,6 @@ public class UpdateAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.item_list, null);
             viewHolder = new ViewHolder();
             //确定每一行布局中每个控件显示的内容
-            viewHolder.imageView = (ImageView) convertView.findViewById(R.id.iv);
             viewHolder.textView = (TextView) convertView.findViewById(R.id.tw);
             //把当前的控件缓存到布局视图中
             convertView.setTag(viewHolder);
@@ -79,22 +78,12 @@ public class UpdateAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         //显示内容
-       // viewHolder.imageView.setImageResource(mList.get(position).getPic());
+        // viewHolder.imageView.setImageResource(mList.get(position).getPic());
         //viewHolder.textView.setText(mList.get(position).getContent());
-        final MyDataaa myData = mList.get(position);
-        viewHolder.imageView.setImageResource(myData.getPic());
-        viewHolder.textView.setText(myData.getContent());
+        final Log myData = mList.get(position);
 
-        //监听每一行的按钮单击事件
-      /*  Button button = (Button) convertView.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext,SexActivity.class);
-                intent.putExtra("data",myData);
-                mContext.startActivity(intent);
-            }
-        });*/
+        viewHolder.textView.setText(myData.getTitle());
+
         return convertView;
     }
 }

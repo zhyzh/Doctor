@@ -22,7 +22,7 @@ Button mButton;
 @Nullable
 @Override
 public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.mine_peoplecenter,null);
+    View view = inflater.inflate(R.layout.mine_mine,null);
     mButton = (Button) view.findViewById(R.id.button);
  /*   mButton.setOnClickListener(new View.OnClickListener() {
         @Override
