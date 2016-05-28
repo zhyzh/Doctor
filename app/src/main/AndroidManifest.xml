@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zhang.nong">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,33 +16,51 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".doctor.activity.ForumReplyActivity" />
-        <activity android:name=".doctor.activity.ForumnewteiActivity"
-            android:windowSoftInputMode="adjustResize"
-            >
+        <activity
+            android:name=".doctor.activity.ForumnewteiActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name=".doctor.activity.ActivityNews" />
+        <activity android:name=".doctor.activity.DemandManActivity" />
+        <activity android:name=".doctor.httpXutils.HttpXtulsActivity" />
+        <activity android:name=".doctor.activity.AboutActivity" />
+        <activity android:name=".doctor.activity.AttentionActivity" />
+        <activity android:name=".doctor.activity.AddressActivity" />
+        <activity android:name=".doctor.activity.CollectActivity" />
+        <activity android:name=".doctor.activity.FeedBackActivity" />
+        <activity android:name=".doctor.activity.GuideActivity" />
+        <activity android:name=".doctor.activity.HelpCenterActivity" />
+        <activity android:name=".doctor.activity.InformationActivity" />
+        <activity android:name=".doctor.activity.MainActivity" />
+        <activity android:name=".doctor.activity.PassWordActivity" />
+        <activity android:name=".doctor.activity.PeopleCenterActivity" />
+        <activity android:name=".doctor.activity.RegisterActivity" />
+        <activity android:name=".doctor.activity.SexActivity" />
+        <activity android:name=".doctor.activity.SplashActivity" />
+        <activity android:name=".doctor.activity.Update" />
+        <activity android:name=".doctor.activity.UpdateHeadeActivity" />
+        <activity android:name=".doctor.activity.UpdateMessageActivity" />
+        <activity android:name=".doctor.activity.Agricultural_Machinery_More_Activity" />
+        <activity android:name=".doctor.activity.Agricultural_Machinery_Publish_Activity" />
+        <activity android:name=".doctor.activity.Home_agricultural_book_Activity" />
+        <activity android:name=".doctor.activity.Home_agricultural_machinery_Activity" />
+        <activity android:name=".doctor.activity.Home_agricultural_tool_product_Activity" />
+        <activity android:name=".doctor.activity.Home_agricultural_weather_Activity" />
+        <activity android:name=".doctor.activity.Home_day_know_Activity" />
+        <activity android:name=".doctor.activity.Home_professor_Activity" />
+        <activity android:name=".doctor.activity.MyActivity" />
+        <activity android:name=".doctor.activity.Nearby_pro_advisory_Activity" />
+        <activity android:name=".doctor.activity.TestActivity" />
+        <activity android:name=".doctor.activity.UserTeiActivity" />
 
-        </activity>
-        <activity android:name=".doctor.activity.ActivityNews">
 
-        </activity>
-        <activity android:name=".doctor.activity.DemandManActivity">
-
-        </activity>
-        <activity android:name=".doctor.httpXutils.HttpXtulsActivity">
-
-
-        </activity>
-        <service android:name="com.zhang.nong.doctor.MyService.ReqService"
+        <service
+            android:name="com.zhang.nong.doctor.MyService.ReqService"
             android:enabled="true"
-            android:exported="true"
-            >
-
-        </service>
+            android:exported="true"></service>
     </application>
 
 

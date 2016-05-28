@@ -1,10 +1,12 @@
 package com.zhang.nong.doctor.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +21,9 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
+import java.net.URLEncoder;
 import java.util.List;
 
 public class ForumnewteiActivity extends AppCompatActivity {
@@ -53,6 +57,9 @@ public class ForumnewteiActivity extends AppCompatActivity {
 
     public void onbak(View view) {
         onBackPressed();
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(mcontentEditText.getWindowToken(),0);
+
     }
 
 
@@ -61,11 +68,12 @@ public class ForumnewteiActivity extends AppCompatActivity {
         //单击发帖的时候我们需要判断用户是否有发帖的权限（是否登录），再判断内容是否为空
         title=mtitleEditText.getText().toString();
         content=mcontentEditText.getText().toString();
-        if (title==null&&content!=null){
+
+        if (title==null){
             //标题是空提示标题不能为空
             show("标题不能为空");
 
-        }else if (content==null&&title!=null){
+        }else if (content==null){
             //内容为空提示内容不能为空
             show("内容不能为空");
 
@@ -77,6 +85,7 @@ public class ForumnewteiActivity extends AppCompatActivity {
         }else {
             //如果用户是登录状态（就的username，id不等于空），并且标题、内容不是空就开始发帖
             if (username!=null&&id!=null){
+                Log.e("发帖的标题，内容",title+content);
                 //准备发帖
                 //get请求
                 //第一步：设置访问路径以及携带数据
@@ -87,11 +96,12 @@ public class ForumnewteiActivity extends AppCompatActivity {
                 params.addQueryStringParameter("biaoname","zhutei");
                 params.addQueryStringParameter("req","add");
                 //a是用户的id，b是用户名、c是标题，d是内容，e是用户位置信息（f是图片、要操作图片表）
-                params.addQueryStringParameter("a",id);
-                params.addQueryStringParameter("b",username);
+                params.addQueryStringParameter("a","11");
+                params.addQueryStringParameter("b","123");
                 params.addQueryStringParameter("c",title);
                 params.addQueryStringParameter("d",content);
                 params.addQueryStringParameter("e","苏州");
+
 
                 //第二步：开始请求，设置请求方式，同时实现回调函数
                 x.http().get(params, new Callback.CommonCallback<String>() {
@@ -101,9 +111,17 @@ public class ForumnewteiActivity extends AppCompatActivity {
                         //把JSON格式的字符串改为Student对象
                         //说明发帖成功，提示成功(以后可以做一个好一点的提示框)并且跳转到帖子的界面
                         show("发帖成功");
-                        Intent intent=new Intent(ForumnewteiActivity.this, MainActivity.class);
-
-
+//                        //传一个带指令的值过去，让首页默认显示是论坛
+//                        Bundle bundle=new Bundle();
+//                        bundle.putSerializable("huidaoteizhi","true");
+//                        Intent intent=new Intent(ForumnewteiActivity.this, MainActivity.class);
+//                        intent.putExtras(bundle);
+//                        startActivity(intent);
+                        onBackPressed();
+                        //收回键盘
+//
+                        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(mcontentEditText.getWindowToken(),0);
 
 
 

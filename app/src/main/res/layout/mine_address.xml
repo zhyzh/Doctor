@@ -5,9 +5,10 @@
 
     <RelativeLayout style="@style/title">
 
-        <ImageView style="@style/title.imageview" />
+        <ImageView style="@style/title.imageview"
+            android:onClick="back"/>
 
-        <EditText
+        <TextView
             style="@style/title.textview"
             android:text="所在地" />
     </RelativeLayout>

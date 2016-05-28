@@ -8,7 +8,7 @@
 
         <ImageView style="@style/title.imageview" />
 
-        <EditText
+        <TextView
             style="@style/title.textview"
             android:text="验证手机号码" />
     </RelativeLayout>

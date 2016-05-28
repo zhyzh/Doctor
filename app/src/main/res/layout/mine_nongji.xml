@@ -27,7 +27,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="90dp"
-            android:src="@drawable/jiahao1" />
+            android:src="@mipmap/jiahao1" />
     </FrameLayout>
     <RelativeLayout
         android:layout_width="match_parent"
