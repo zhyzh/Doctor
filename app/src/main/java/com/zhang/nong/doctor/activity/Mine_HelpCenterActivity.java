@@ -10,7 +10,7 @@ import com.zhang.nong.R;
 /**
  * Created by XCF on 2016/5/21.
  */
-public class HelpCenterActivity extends Activity {
+public class Mine_HelpCenterActivity extends Activity {
     ImageView mImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

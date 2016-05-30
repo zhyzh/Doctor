@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--    <LinearLayout
+            android:background="#d9dada"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            >
+            <ImageButton
+                android:id="@+id/forum_replyback"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:src="@drawable/boss_unipay_icon_back"
+                android:onClick="onback"
+                />
+            <android.support.percent.PercentRelativeLayout
+
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/edittext_forum1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    app:layout_heightPercent="100%"
+                    app:layout_widthPercent="70%"
+
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:hint="主题贴"
+                    android:textSize="24sp"
+                    android:gravity="center"
+
+
+                    />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <ImageButton
+                android:id="@+id/forum_louzhu"
+                android:layout_weight="0.7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/applouzhu"
+                />
+
+
+        </LinearLayout>-->
+    <RelativeLayout style="@style/title">
+
+        <ImageView
+            android:id="@+id/forum_replyback"
+            style="@style/title.imageview"
+            android:onClick="back" />
+
+        <TextView
+            style="@style/title.textview"
+            android:text="主题帖" />
+
+        <ImageView
+            android:id="@+id/forum_louzhu"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/i_66" />
+    </RelativeLayout>
+
+    <ListView
+
+        android:id="@+id/forum_reply_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="#d9dada"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/forum_replyzan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="0.7"
+            android:src="@drawable/goods2" />
+
+        <android.support.percent.PercentRelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <EditText
+                android:id="@+id/edittext_forumhuifu"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@color/forum_sen"
+                android:hint="回复楼主"
+                android:textSize="16sp"
+                app:layout_heightPercent="70%"
+                app:layout_widthPercent="90%" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <Button
+            android:id="@+id/forum_replysen"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="发送"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

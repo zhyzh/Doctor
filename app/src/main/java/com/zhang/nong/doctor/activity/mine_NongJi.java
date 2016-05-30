@@ -6,12 +6,12 @@ import android.os.Bundle;
 import com.zhang.nong.R;
 
 /**
- * Created by XCF on 2016/5/23.
+ * Created by XCF on 2016/5/30.
  */
-public class SexActivity extends Activity {
+public class mine_NongJi extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mine_sex);
+        setContentView(R.layout.mine_nongji);
     }
 }

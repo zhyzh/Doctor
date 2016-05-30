@@ -4,21 +4,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.activity.DemandManActivity;
+import com.zhang.nong.doctor.activity.Forum_DemandManActivity;
 import com.zhang.nong.doctor.com.java.beans.Reply;
 import com.zhang.nong.doctor.com.java.beans.Zhutei;
 
@@ -204,7 +200,7 @@ public class Froum_replyAdapter extends BaseAdapter {
                 }
 
 
-                Intent intent = new Intent(context, DemandManActivity.class);
+                Intent intent = new Intent(context, Forum_DemandManActivity.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
 
@@ -224,7 +220,7 @@ public class Froum_replyAdapter extends BaseAdapter {
                 }
 
 
-                Intent intent = new Intent(context, DemandManActivity.class);
+                Intent intent = new Intent(context, Forum_DemandManActivity.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }

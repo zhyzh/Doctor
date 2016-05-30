@@ -39,7 +39,7 @@ public class CollectActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_collect);
+        setContentView(R.layout.mine_collect);
         mListView = (ListView) findViewById(R.id.listview);
         mImageView = (ImageView) findViewById(R.id.imageview);
         initData();//自定义初始化的方法

@@ -26,5 +26,5 @@
         android:background="@drawable/shape2"
         android:text="确定"
         android:textColor="#fff"
-        android:textSize="26dp" />
+        android:textSize="20dp" />
 </LinearLayout>

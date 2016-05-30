@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -51,7 +50,7 @@ public class Froum_replyobjectAdapter  extends BaseAdapter {
         //确定每一行的布局，并且把对应的数据显示到布局中
         //第一个参数：要显示的布局的索引，第二个参数，包含每一行布局的父布局，这里直接用null
         //确定每一行布局控件中显示的内容
-        convertView=mInflater.inflate(R.layout.fragmentreply_item,null);
+        convertView=mInflater.inflate(R.layout.forum_fragmentreply_item,null);
         //确定每一行布局控件中显示的内容
         //头像
         ImageView mImageview= (ImageView) convertView.findViewById(R.id.forum_itemage_2);

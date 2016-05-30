@@ -15,21 +15,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import android.widget.RadioGroup;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.MyService.ReqService;
 import com.zhang.nong.doctor.adapters.Froum_newsAdapter;
 
 import com.zhang.nong.doctor.fragments.Forum_fragmentnews;
 import com.zhang.nong.doctor.fragments.Forum_fragmentreply;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class ActivityNews extends AppCompatActivity {
@@ -53,7 +47,7 @@ public class ActivityNews extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity_news);
+        setContentView(R.layout.forum_activity_activity_news);
 
         initViews();
 

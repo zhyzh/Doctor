@@ -36,7 +36,7 @@ private ListView nearby_pro_list;//专家的列表
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.zhuanjia_listview);
+	setContentView(R.layout.home_zhuanjia_listview);
 	initviews();
 	initDatas();
 	initEvent();

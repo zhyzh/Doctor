@@ -11,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.adapters.UpdateAdapter;
 import com.zhang.nong.doctor.adapters.UpdateAdapter2;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 import com.zhang.nong.doctor.com.java.beans.User;
@@ -42,11 +41,11 @@ public class PeopleCenterActivity extends Activity {
         mImageView2 = (ImageView) findViewById(R.id.guanzhu);
         mListView = (ListView) findViewById(R.id.listview);
 
-      //  mTextView.setText(user.getUserName());
-
         initData();//自定义初始化的方法
         mAdapter = new UpdateAdapter2(PeopleCenterActivity.this, mList);
         mListView.setAdapter(mAdapter);
+
+        mTextView.setText(user.getUserName());
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -58,15 +57,15 @@ public class PeopleCenterActivity extends Activity {
 
                         break;
                     case 1:
-                        intent.setClass(PeopleCenterActivity.this, Update.class);
+                        intent.setClass(PeopleCenterActivity.this, InformationActivity.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent.setClass(PeopleCenterActivity.this, HelpCenterActivity.class);
+                        intent.setClass(PeopleCenterActivity.this, Mine_HelpCenterActivity.class);
                         startActivity(intent);
                         break;
                     case 3:
-                        intent.setClass(PeopleCenterActivity.this, AboutActivity.class);
+                        intent.setClass(PeopleCenterActivity.this, Mine_AboutActivity.class);
                         startActivity(intent);
                         break;
                     case 4:
@@ -114,7 +113,7 @@ public class PeopleCenterActivity extends Activity {
     }
 
     public void back2(View view) {
-        Intent intent = new Intent(PeopleCenterActivity.this,AttentionActivity.class);
+        Intent intent = new Intent(PeopleCenterActivity.this,Mine_AttentionActivity.class);
         startActivity(intent);
     }
 

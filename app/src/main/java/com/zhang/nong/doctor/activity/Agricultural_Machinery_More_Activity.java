@@ -39,7 +39,7 @@ private String[][] machinery_class={{"全部"},
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.agricultural_machinery_more);
+	setContentView(R.layout.home_agricultural_machinery_more);
 	initViews();
 	initDatas();
 	initEvent();

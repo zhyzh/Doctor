@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.LinearLayout;
 
 import com.zhang.nong.R;
 
 
-public class SplashActivity extends AppCompatActivity {
+public class Mine_SplashActivity extends AppCompatActivity {
     LinearLayout mRoot;
 
     @Override
@@ -67,7 +66,7 @@ public class SplashActivity extends AppCompatActivity {
             //动画执行结束
             @Override
             public void onAnimationRepeat(Animation animation) {
-                startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+                startActivity(new Intent(Mine_SplashActivity.this,GuideActivity.class));
                 finish();
             }
         });
@@ -82,9 +81,9 @@ public class SplashActivity extends AppCompatActivity {
         boolean userGuide = sp.getBoolean("activity_splash",false);
         if (!userGuide){
             //跳到新手引导页
-            startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+            startActivity(new Intent(Mine_SplashActivity.this,GuideActivity.class));
         }else {
-            startActivity(new Intent(SplashActivity.this,MainActivity.class));
+            startActivity(new Intent(Mine_SplashActivity.this,MainActivity.class));
         }
 
         finish();

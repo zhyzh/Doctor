@@ -1,17 +1,14 @@
 package com.zhang.nong.doctor.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.activity.SexActivity;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 
 import java.util.List;
@@ -146,7 +143,7 @@ List<MyDataaa> mList;
         if(convertView == null){
             //说明是第一次绘制整屏列表
             //第一个参数：每一行要显示的布局索引,第二个参数：包含每一行布局的父布局，这里直接用null
-            convertView = mInflater.inflate(R.layout.item_list2, null);
+            convertView = mInflater.inflate(R.layout.mine_item_list2, null);
             viewHolder = new ViewHolder();
             //确定每一行布局中每个控件显示的内容
             viewHolder.imageView = (ImageView) convertView.findViewById(R.id.iv);

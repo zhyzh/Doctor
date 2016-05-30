@@ -1,5 +1,6 @@
 package com.zhang.nong.doctor.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -34,8 +36,7 @@ import java.util.List;
 public class HomeFragment extends Fragment implements ViewPager.OnPageChangeListener {
 
     private View home_view;
-    int[] imgs = {R.drawable.iv_home_view_pager1, R.drawable.iv_home_view_pager2,
-            R.drawable.iv_home_view_pager3};
+    int[] imgs = {R.mipmap.gfgf, R.mipmap.vcv, R.mipmap.vcc};
     String[] title_text = {"现代农业的发展", "发展现代农业", "发展专业合作"};
     private List<ImageView> mListDatas;
     private ViewPager home_vp_pager;
@@ -161,7 +162,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         //设置数据方式
         home_vp_pager.setAdapter(new MyAdapter());
-//设置监听器
+        //设置监听器
         home_vp_pager.setOnPageChangeListener(this);
 
         //设置默认选中的中间的item
@@ -294,5 +295,16 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
          *#SCROLL_STATE_SETTLING：固定状态
          */
     }
+//    //隐藏虚拟键盘
+//    public static void HideKeyboard(View v)
+//    {
+//        InputMethodManager imm = ( InputMethodManager ) v.getContext( ).getSystemService( Context.INPUT_METHOD_SERVICE );
+//        if ( imm.isActive( ) ) {
+//            imm.hideSoftInputFromWindow( v.getApplicationWindowToken( ) , 0 );
+//
+//        }
+//    }
+
+
 
 }

@@ -10,6 +10,6 @@ public class Nearby_pro_advisory_Activity extends AppCompatActivity {
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.nearby_pro_advisory);
+	setContentView(R.layout.home_nearby_pro_advisory);
 }
 }

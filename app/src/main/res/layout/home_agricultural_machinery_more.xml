@@ -6,7 +6,7 @@
 	android:orientation="vertical"
 	>
 
-	<LinearLayout
+<!--	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:background="@color/title_color"
@@ -28,8 +28,18 @@
 			android:textSize="20sp"/>
 
 
-	</LinearLayout>
+	</LinearLayout>-->
+	<RelativeLayout style="@style/title">
 
+		<ImageView
+			android:id="@+id/iv_agricultural_machinery_more_back"
+			style="@style/title.imageview" />
+
+		<TextView
+			android:id="@+id/tv_agricultural_machinery_title"
+			style="@style/title.textview"
+			android:text="农机列表" />
+	</RelativeLayout>
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">

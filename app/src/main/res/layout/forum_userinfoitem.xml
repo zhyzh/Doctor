@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -17,8 +17,8 @@
 
             <ImageView
                 android:id="@+id/forum_itemage_2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/abcman" />
@@ -28,59 +28,58 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/forum_itemage_2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_toRightOf="@+id/forum_itemage_2"
                 android:clickable="true"
                 android:text="一个人的梦想ok" />
 
 
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/forum_itemage_2"
-                android:layout_marginRight="100dp"
-                >
-                <ImageButton
+                android:layout_marginRight="100dp">
+
+                <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/good"
+                    android:layout_marginTop="40dp"
                     android:background="#0000"
+                    android:src="@drawable/good" />
 
-                    />
                 <TextView
                     android:id="@+id/forum_zannum"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="40dp"
                     android:gravity="center"
                     android:text="35"
                     android:textColor="@color/forum_font" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/forum_itemage_2"
+                android:layout_alignTop="@+id/forum_itemage_2">
 
-                >
-
-
-                <ImageButton
+                <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:layout_alignTop="@+id/forum_itemage_2"
-                    android:src="@drawable/newsrep"
+                    android:layout_marginTop="40dp"
                     android:background="#0000"
+                    android:src="@drawable/newsrep" />
 
-
-                    />
                 <TextView
                     android:id="@+id/huifunum"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginRight="10dp"
+                    android:layout_marginTop="40dp"
                     android:gravity="center"
                     android:text="7451"
                     android:textColor="@color/forum_font" />
@@ -88,39 +87,41 @@
             </LinearLayout>
 
 
-
             <TextView
                 android:id="@+id/forum_teitime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/forum_itemage_2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/forum_itemage_2"
                 android:text="30分钟前"
                 android:textColor="@color/forum_font" />
         </RelativeLayout>
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#D4D4D4" />
 
         <TextView
             android:id="@+id/forum_replytitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="虎吧升级专贴三"
-            android:textSize="24sp"
+            android:layout_marginLeft="10dp"
             android:clickable="true"
-            />
+            android:text="虎吧升级专贴三"
+            android:textSize="20dp" />
+
         <TextView
             android:id="@+id/forum_replycontent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="为了吧友升级,专开水经验贴，其他无任何大师们的精华缩写或者截图"
-
+            android:layout_marginLeft="15dp"
             android:clickable="true"
-            />
+            android:text="为了吧友升级,专开水经验贴，其他无任何大师们的精华缩写或者截图" />
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
         <TextView
             android:id="@+id/forum_replyquxiao"
             android:layout_width="match_parent"
@@ -128,16 +129,11 @@
             android:background="@color/forum_font">
 
         </TextView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
 
 
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

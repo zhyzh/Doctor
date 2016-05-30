@@ -7,7 +7,7 @@
 
         <ImageView style="@style/title.imageview" />
 
-        <EditText
+        <TextView
             style="@style/title.textview"
             android:text="账户详细信息" />
     </RelativeLayout>

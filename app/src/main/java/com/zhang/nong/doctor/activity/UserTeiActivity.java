@@ -41,7 +41,7 @@ public class UserTeiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_tei);
+        setContentView(R.layout.forum_activity_user_tei);
         initViews();
         initData();
 

@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.adapters.UpdateAdapter;
 import com.zhang.nong.doctor.adapters.UpdateAdapter2;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 
@@ -31,7 +30,7 @@ public class InformationActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_information);
+        setContentView(R.layout.mine_activity_user_information);
         mListView = (ListView) findViewById(R.id.listview);
         mImageView = (ImageView) findViewById(R.id.imageview);
         initData();//自定义初始化的方法
@@ -60,7 +59,7 @@ public class InformationActivity extends Activity {
 
                         break;
                     case 2:
-                        intent.setClass(InformationActivity.this, SexActivity.class);
+                        intent.setClass(InformationActivity.this, Mine_SexActivity.class);
                         startActivity(intent);
                         break;
                     case 3:

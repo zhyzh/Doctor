@@ -45,7 +45,7 @@ public long getItemId(int position) {
 
 @Override
 public View getView(int position, View convertView, ViewGroup parent) {
-	convertView=mInflater.inflate(R.layout.nearby_professor_item,null);
+	convertView=mInflater.inflate(R.layout.home_nearby_professor_item,null);
 	//专家头像
 	ImageView iv_nearby_professor_head= (ImageView)
 		 	convertView.findViewById(R.id.iv_nearby_professor_head);

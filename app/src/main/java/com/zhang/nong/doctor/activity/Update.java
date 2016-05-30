@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.adapters.UpdateAdapter;
 import com.zhang.nong.doctor.adapters.UpdateAdapter2;
 import com.zhang.nong.doctor.com.java.beans.MyDataaa;
 
@@ -65,7 +64,7 @@ public class Update extends AppCompatActivity {
 
                         break;
                     case 4:
-                        intent.setClass(Update.this, SexActivity.class);
+                        intent.setClass(Update.this, Mine_SexActivity.class);
                         startActivity(intent);
                         break;
                     case 5:

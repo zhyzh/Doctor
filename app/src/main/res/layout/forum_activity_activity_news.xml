@@ -6,21 +6,26 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.zhang.nong.doctor.activity.ActivityNews">
-    <LinearLayout
+    <RelativeLayout style="@style/title">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:onClick="back"
+            style="@style/title.imageview" />
+
+        <TextView
+            style="@style/title.textview"
+            android:text="消息" />
+    </RelativeLayout>
+
+    <!--<LinearLayout
         android:background="#d9dada"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
-        <ImageButton
-            android:id="@+id/forum_replyback"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:src="@drawable/boss_unipay_icon_back"
-            android:onClick="onback"
-            />
+
         <android.support.percent.PercentRelativeLayout
 
             android:layout_weight="8"
@@ -48,7 +53,7 @@
 
 
 
-    </LinearLayout>
+    </LinearLayout>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

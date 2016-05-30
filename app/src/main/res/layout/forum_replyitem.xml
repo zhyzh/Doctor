@@ -22,8 +22,8 @@
                 android:id="@+id/forum_replyitemage_2"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:src="@drawable/abcman"
                 android:clickable="true"
                 />
@@ -37,7 +37,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:focusable="false"
-
+android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
                     android:text="一个人的梦想ok"
                     android:clickable="true"
                     />
@@ -94,22 +95,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2016—05-12"
-                    android:textColor="@color/forum_font"
-
-                    />
-
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/forum_font" />
             </LinearLayout>
-
-
         </RelativeLayout>
 
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#D4D4D4" />
         <TextView
             android:id="@+id/forum_replytitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="虎吧升级专贴三"
-            android:textSize="24sp"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
             android:clickable="true"
             />
         <TextView
@@ -117,7 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="为了吧友升级,专开水经验贴，其他无任何大师们的精华缩写或者截图"
-            
+            android:layout_marginLeft="15dp"
             android:clickable="true"
             />
 

@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
         android:text="发布农机"
-        android:textSize="26dp"
+        android:textSize="20dp"
         android:textColor="#fff"/>
     <Button
         android:layout_width="350dp"
@@ -29,6 +29,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
         android:text="发布土地"
-        android:textSize="26dp"
+        android:textSize="20dp"
         android:textColor="#fff"/>
 </LinearLayout>

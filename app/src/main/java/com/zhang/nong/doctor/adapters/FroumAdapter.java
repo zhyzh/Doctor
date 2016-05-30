@@ -3,7 +3,6 @@ package com.zhang.nong.doctor.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.zhang.nong.MainActivity;
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.activity.DemandManActivity;
+import com.zhang.nong.doctor.activity.Forum_DemandManActivity;
 import com.zhang.nong.doctor.activity.ForumReplyActivity;
-import com.zhang.nong.doctor.com.java.beans.ForumMyData;
 import com.zhang.nong.doctor.com.java.beans.Zhutei;
 
 import java.util.List;
@@ -141,7 +138,7 @@ public class FroumAdapter extends BaseAdapter{
 
 
 
-                Intent intent=new Intent(context, DemandManActivity.class);
+                Intent intent=new Intent(context, Forum_DemandManActivity.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
 
@@ -159,7 +156,7 @@ public class FroumAdapter extends BaseAdapter{
 
 
 
-                Intent intent=new Intent(context, DemandManActivity.class);
+                Intent intent=new Intent(context, Forum_DemandManActivity.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }

@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,10 +12,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.adapters.Froum_replyAdapter;
-import com.zhang.nong.doctor.com.java.beans.Reply;
 import com.zhang.nong.doctor.com.java.beans.User;
-import com.zhang.nong.doctor.com.java.beans.Zhutei;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -25,7 +21,7 @@ import org.xutils.x;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class DemandManActivity extends AppCompatActivity {
+public class Forum_DemandManActivity extends AppCompatActivity {
     //声明控件
     TextView musernameTextView,mteinumTextView,mcontentionnumTextView,mcolletnumTextView;
     LinearLayout mteiLinearLayout,mconLinearLayout,mcolectLinearLayout;
@@ -38,7 +34,7 @@ public class DemandManActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demand_man);
+        setContentView(R.layout.forum_activity_demand_man);
         //初始化控件
         initData();
 //        //根据传递过来的用户id从服务器上获取网路数据
@@ -55,21 +51,15 @@ public class DemandManActivity extends AppCompatActivity {
         mcontentionnumTextView.setText(user.getAttentionNum());
         mcolletnumTextView.setText(user.getPrivatecollectNum());
         mmanImageView.setImageResource(R.drawable.abcman);
-
-
-
     }
-
-
-
     private void initData() {
         musernameTextView= (TextView) findViewById(R.id.forum_damuser);
         mteinumTextView= (TextView) findViewById(R.id.forum_teinum);
-        mcontentionnumTextView= (TextView) findViewById(R.id.forum_contentionnum);
-        mcolletnumTextView= (TextView) findViewById(R.id.forum_collectnum);
+       // mcontentionnumTextView= (TextView) findViewById(R.id.forum_contentionnum);
+        //mcolletnumTextView= (TextView) findViewById(R.id.forum_collectnum);
         mteiLinearLayout= (LinearLayout) findViewById(R.id.forum_usertei);
-        mconLinearLayout= (LinearLayout) findViewById(R.id.forum_contentobjict);
-        mcolectLinearLayout= (LinearLayout) findViewById(R.id.forum_collectobject);
+       // mconLinearLayout= (LinearLayout) findViewById(R.id.forum_contentobjict);
+       // mcolectLinearLayout= (LinearLayout) findViewById(R.id.forum_collectobject);
 
         //头像
         mmanImageView= (ImageView) findViewById(R.id.image2);
@@ -133,28 +123,5 @@ public class DemandManActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-    }
-    public void onclickDemand(View view){
-        switch (view.getId()){
-            case R.id.forum_usertei:
-                Bundle bundle=new Bundle();
-                bundle.putSerializable("id",id);
-                Intent intent=new Intent(DemandManActivity.this,UserTeiActivity.class);
-                intent.putExtras(bundle);
-                startActivity(intent);
-
-                break;
-            case R.id.forum_contentobjict:
-                //查询用户关注
-
-                break;
-            case (R.id.forum_collectobject):
-                //查询用户收藏
-
-                break;
-        }
     }
 }

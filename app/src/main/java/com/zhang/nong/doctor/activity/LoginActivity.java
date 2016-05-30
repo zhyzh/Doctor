@@ -93,9 +93,9 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
                 //Toast.makeText(LoginActivity.this,"sfsg",Toast.LENGTH_SHORT).show();
                 //用户单击了登录
-                phone = mEditText1.getText().toString();
-                password = mEditText2.getText().toString();
-                Toast.makeText(LoginActivity.this, phone + "-" + password, Toast.LENGTH_SHORT).show();
+                String phone = mEditText1.getText().toString();
+                String password = mEditText2.getText().toString();
+                //Toast.makeText(LoginActivity.this, phone + "-" + password, Toast.LENGTH_SHORT).show();
                 //用post请求进行登录
                 //POST请求
                 //第一步：设置访问路径以及携带数据
@@ -119,7 +119,7 @@ public class LoginActivity extends Activity {
                         user = gson.fromJson(result, User.class);
                         // Log.e("zzia1", user.toString());
                         if (user != null) {
-                            Toast.makeText(LoginActivity.this, "获取了用户信息" + user.toString(), Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginActivity.this, "获取了用户信息" + user.toString(), Toast.LENGTH_SHORT).show();
                             //拿到用户信息需要传值到用户界面
                             Bundle bundle = new Bundle();
                             //把对象放到bundle

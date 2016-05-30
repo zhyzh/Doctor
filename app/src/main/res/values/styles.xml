@@ -26,7 +26,7 @@
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:background">@null</item>
-        <item name="android:textSize">24dp</item>
+        <item name="android:textSize">20dp</item>
     </style>
 
 
@@ -50,7 +50,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:textSize">28dp</item>
+        <item name="android:textSize">20dp</item>
     </style>
     <style name="right">
         <item name="android:layout_width">30dp</item>
@@ -67,7 +67,7 @@
     <style name="home_iv_value">
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">80dp</item>
         <item name="android:layout_width">0dp</item>
     </style>
     <style name="home_tv_value">

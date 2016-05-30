@@ -20,7 +20,6 @@
         android:background="@drawable/shape"
         android:text="登录查看我的信息"
         android:textColor="#fff"
-        android:onClick="back"
         android:textSize="16dp"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"

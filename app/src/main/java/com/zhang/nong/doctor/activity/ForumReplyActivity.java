@@ -15,17 +15,13 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.zhang.nong.MainActivity;
 import com.zhang.nong.R;
-import com.zhang.nong.doctor.adapters.FroumAdapter;
 import com.zhang.nong.doctor.adapters.Froum_replyAdapter;
 import com.zhang.nong.doctor.adapters.Froum_replyobjectAdapter;
-import com.zhang.nong.doctor.com.java.beans.ForumMyData;
 import com.zhang.nong.doctor.com.java.beans.Reply;
 import com.zhang.nong.doctor.com.java.beans.Zhutei;
 import com.zhang.nong.doctor.httpXutils.MyApplication;
 
-import org.w3c.dom.Text;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -33,8 +29,6 @@ import org.xutils.x;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.zip.Inflater;
 
 
 public class ForumReplyActivity extends AppCompatActivity implements Froum_replyAdapter.Mgetlist {
@@ -64,7 +58,7 @@ public class ForumReplyActivity extends AppCompatActivity implements Froum_reply
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forum_reply);
+        setContentView(R.layout.forum_activity_forum_reply);
         //接收zhutei传递过来的zhutei对象
         Intent intent = getIntent();
         //获取intent携带的bundle

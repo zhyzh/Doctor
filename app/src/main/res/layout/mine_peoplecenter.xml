@@ -5,7 +5,8 @@
     android:orientation="vertical">
 
     <RelativeLayout style="@style/title">
- h        <ImageView
+
+        <ImageView
             style="@style/title.imageview"
             android:onClick="back" />
 

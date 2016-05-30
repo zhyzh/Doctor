@@ -7,20 +7,24 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/mm"
-        android:layout_marginTop="20dp"/>
+        android:src="@mipmap/mm"
+        android:layout_marginTop="80dp"/>
 
     <Button
+
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/shape"
         android:text="登录查看我的信息"
-        android:textColor="#ffffff"
-        android:textSize="30dp"
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
         />
+
 
 
 </LinearLayout>
