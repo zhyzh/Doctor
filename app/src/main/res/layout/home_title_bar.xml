@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+	>
+<LinearLayout
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+
+	<com.zhang.nong.doctor.packaging.Home_Image_CycleView
+		android:id="@+id/home_icv_topView"
+		android:layout_width="match_parent"
+		android:layout_height="150dp">
+
+	</com.zhang.nong.doctor.packaging.Home_Image_CycleView>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+
+		android:orientation="vertical">
+
+
+		<LinearLayout
+			android:id="@+id/home_iv_tv_group1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			>
+
+			<LinearLayout
+				android:id="@+id/home_iv1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:id="@+id/iv_home_doctor"
+					style="@style/home_iv_value"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="10dp"
+					android:onClick="zhaozhuanjia"
+					android:src="@drawable/home_doctor"
+					/>
+
+				<ImageView
+					android:id="@+id/iv_home_agricultural"
+					style="@style/home_iv_value"
+					android:src="@drawable/home_agricultural"
+					/>
+
+				<ImageView
+					android:id="@+id/iv_home_marchinery"
+					style="@style/home_iv_value"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="15dp"
+					android:src="@drawable/home_machinery"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/home_tv1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/home_tv1">
+
+				<TextView
+					android:id="@+id/home_iv_doctor"
+					style="@style/home_tv_value"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="10dp"
+					android:text="@string/home_tv_doctor"
+					/>
+
+				<TextView
+					android:id="@+id/home_tv_agricultural"
+					style="@style/home_tv_value"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="10dp"
+					android:text="@string/home_tv_agricultural"
+					/>
+
+				<TextView
+					android:id="@+id/home_tv_marchinery"
+					style="@style/home_tv_value"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="10dp"
+
+					android:text="@string/home_tv_marchinery"
+					/>
+
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/home_iv_tv_group2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			>
+
+			<LinearLayout
+				android:id="@+id/home_iv2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<ImageView
+					android:id="@+id/iv_home_day"
+					style="@style/home_iv_value"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="10dp"
+					android:src="@drawable/home_day"
+					/>
+
+				<ImageView
+					android:id="@+id/iv_home_book"
+					style="@style/home_iv_value"
+					android:src="@drawable/home_book"
+					/>
+
+				<ImageView
+					android:id="@+id/iv_home_weather"
+					style="@style/home_iv_value"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="15dp"
+					android:src="@drawable/home_weather"
+					/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/home_tv2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/home_tv1">
+
+				<TextView
+					android:id="@+id/home_iv_day"
+					style="@style/home_tv_value"
+					android:layout_marginLeft="15dp"
+					android:layout_marginRight="10dp"
+					android:text="@string/home_tv_day"
+					/>
+
+				<TextView
+					android:id="@+id/home_tv_book"
+					style="@style/home_tv_value"
+					android:text="@string/home_tv_book"
+					/>
+
+				<TextView
+					android:id="@+id/home_tv_weather"
+					style="@style/home_tv_value"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="15dp"
+					android:text="@string/home_tv_weather"
+					/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/home_tv_recommend"
+			android:textSize="20sp"
+			/>
+
+
+	</LinearLayout>
+</LinearLayout>
+</ScrollView>

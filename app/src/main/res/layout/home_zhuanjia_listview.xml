@@ -18,7 +18,6 @@
 			/>
 
 		<TextView
-			android:id="@+id/tv_zhuanjia_title"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:gravity="center"
@@ -76,8 +75,8 @@
 		</LinearLayout>
 
 	</LinearLayout>
-
 	<ListView
+		android:scrollbars="none"
 		android:id="@+id/lv_nearby_pro_list"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">

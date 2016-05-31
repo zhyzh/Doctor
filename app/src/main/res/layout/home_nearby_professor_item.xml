@@ -30,7 +30,7 @@
 				android:text="名字"
 				android:gravity="center"
 				android:textColor="@android:color/black"
-				android:textSize="20sp"/>
+				android:textSize="10sp"/>
 
 			<TextView
 				android:id="@+id/tv_nearby_pro_title"
@@ -40,7 +40,7 @@
 				android:layout_marginLeft="20dp"
 				android:text="杨志远"
 				android:textColor="@android:color/black"
-				android:textSize="20sp"
+				android:textSize="15sp"
 				/>
 		</LinearLayout>
 
@@ -58,17 +58,17 @@
 				android:text="特长"
 				android:gravity="center"
 				android:textColor="@android:color/black"
-				android:textSize="20sp"/>
+				android:textSize="10sp"/>
 
 			<TextView
 				android:id="@+id/tv_nearby_pro_skillname"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="化肥"
-				android:layout_marginLeft="20dp"
+				android:layout_marginLeft="10dp"
 				android:gravity="center"
 				android:textColor="@android:color/black"
-				android:textSize="20sp"
+				android:textSize="15sp"
 				/>
 		</LinearLayout>
 

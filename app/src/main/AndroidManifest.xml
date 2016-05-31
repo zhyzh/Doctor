@@ -13,7 +13,9 @@
 		android:theme="@style/AppTheme">
 		<activity android:name=".doctor.activity.LoginActivity"/>
 		<activity android:name=".GoodActivity"/>
-		<activity android:name=".MainActivity">
+		<activity
+			android:name=".MainActivity"
+			android:windowSoftInputMode="adjustPan">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 
@@ -33,13 +35,13 @@
 		</activity>
 		<activity android:name=".doctor.httpXutils.HttpXtulsActivity">
 		</activity>
-		<activity android:name=".doctor.activity.Home_agricultural_book_Activity"/>
-		<activity android:name=".doctor.activity.Home_agricultural_machinery_Activity"/>
-		<activity android:name=".doctor.activity.Home_day_know_Activity"/>
-		<activity android:name=".doctor.activity.Home_agricultural_tool_product_Activity"/>
-		<activity android:name=".doctor.activity.Home_agricultural_weather_Activity"/>
+		<activity android:name=".doctor.activity.Home_Agricultural_Book_Activity"/>
+		<activity android:name=".doctor.activity.Home_Agricultural_Machinery_Activity"/>
+		<activity android:name=".doctor.activity.Home_Day_Know_Activity"/>
+		<activity android:name=".doctor.activity.Home_Agricultural_Tool_Product_Activity"/>
+		<activity android:name=".doctor.activity.Home_Agricultural_Weather_Activity"/>
 		<activity android:name=".doctor.activity.Home_professor_Activity"/>
-		<activity android:name=".doctor.activity.Nearby_pro_advisory_Activity"/>
+		<activity android:name=".doctor.activity.Home_Nearby_pro_advisory_Activity"/>
 
 		<service
 			android:name=".doctor.MyService.ReqService"
@@ -47,9 +49,19 @@
 			android:exported="true">
 		</service>
 
-		<activity android:name=".doctor.activity.Agricultural_Machinery_More_Activity">
+		<activity android:name=".doctor.activity.Home_Agricultural_Machinery_More_Activity">
 		</activity>
-		<activity android:name=".doctor.activity.Agricultural_Machinery_Publish_Activity">
+		<activity android:name=".doctor.activity.Home_Agricultural_Machinery_Publish_Activity">
+		</activity>
+		<activity android:name=".doctor.activity.Home_Agricultural_Tool_Details_Activity">
+		</activity>
+		<activity android:name=".doctor.activity.Home_Agricultural_Machinery_Detail_Info_Activity">
+		</activity>
+		<activity android:name=".doctor.activity.Home_Day_Know_Date_Type_Activity">
+		</activity>
+		<activity android:name=".doctor.activity.Home_Day_Know_Date_Type_Detail_Activity">
+		</activity>
+		<activity android:name=".doctor.activity.Home_Agricultural_Book_Detail_Activity">
 		</activity>
 	</application>
 

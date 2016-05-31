@@ -1,5 +1,5 @@
 <resources>
-	<string name="app_name">My Application</string>
+	<string name="app_name">农博士</string>
 	<string name="wenzi">您好：您的宝贵意见对我们很重要，如果您的建议一经采纳，我们将送出精美的礼品一份！！！</string>
 	<string name="home_tv_doctor">找专家</string>
 	<string name="home_tv_agricultural">农资</string>
@@ -28,4 +28,36 @@
 		<item>收获机械</item>
 		<item>其他</item>
 	</string-array>
+	<string-array name="day_know_type">
+		<item>农作物</item>
+		<item>蔬菜</item>
+		<item>水果</item>
+		<item>花卉</item>
+		<item>苗木</item>
+		<item>使用菌</item>
+	</string-array>
+	<string name="day_know_date_type_detail_title">
+		水稻播种前为什么要晒种？
+	</string>
+	<string name="day_know_date_type_detail" formatted="false">
+		水稻播种前晒种可以有效的提高种子的发芽率和发芽势，主要原因是：
+       1、晒种可以促进种子的后熟和提高酶的活性。水稻种子收获后，虽然经过晒干扬净后再进仓，但由于成熟度和干燥度不一，贮藏期间的空气湿度和温度也都会有变化，若种子吸湿，呼吸作用旺盛，种子内养分消耗多，往往导致种子发芽能力减弱，发芽势降低，经过晒种，可以增强种皮的通过性，使之在浸种时吸水均匀，增进酶的活性。
+      2、晒种可以促进氧气进入种子内部，种子发芽需要游离的氧气，氧气是种胚形成赤霉素或将结合状态的赤霉素转变为自由态赤霉素的首要条件，赤霉素可以诱导a-淀粉酶的形成，催化淀粉降解为可溶性糖，以供种胚呼吸和幼根、幼芽形成新细胞之用。
+      3、晒种可以降低谷壳内胺A、谷壳内胺B、离层酸和香草酸等物质的浓度，这些物质浓度高时对发芽有抑制作用。
+      4、太阳光谱中的短波光如紫外线有杀菌能力，因此晒种有一定的杀菌作用
+	</string>
+	<string name="agr_book_detail_text_title">
+		果树遇到病虫害应该如何解决
+	</string>
+
+	<string name="agr_book_detail_text_detail" formatted="false">
+		喷高锰酸钾。它是一种强氧化剂，对多种化学物质都具有氧化分解作用。喷洒6000倍高锰酸钾溶液，能有效地缓解药害。
+
+    用清水冲洗。多数化学药剂均不耐水冲刷，如果施药浓度过大造成药害，要用喷雾器装满清水，朝果树叶片反复清洗，以冲刷掉残留在叶片表面的药剂。
+
+    暂停用同类药。在药害尚未完全解除之前，尽量减少使用农药，尤其是同类农药要停止使用，以免加重药害。
+
+    紧施肥水。果树发生药害后，应结合浇水补充一些速效化肥，并接着中耕松土，可促进果树尽快恢复正常的生长发育。同时，应在叶面喷施0.3%-0.5%尿素、0.2%-0.3%磷酸二氢钾等，以改善果树营养状况，增强根系吸收能力。操作时，应注意把叶背面喷匀，最适温度为18-25%℃，时间在上午10点前和下午4点后进行。
+	</string>
+
 </resources>

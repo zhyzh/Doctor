@@ -1,34 +1,23 @@
 package com.zhang.nong.doctor.httpXutils;
 
 
-import android.app.Application;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.zhang.nong.R;
 import com.zhang.nong.doctor.com.java.beans.User;
 
-import java.lang.reflect.Type;
-
-
-
-
-
 import org.apache.http.client.HttpClient;
-
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-
-import java.lang.reflect.TypeVariable;
+import java.lang.reflect.Type;
 import java.util.List;
 
 
@@ -112,7 +101,7 @@ public class HttpXtulsActivity extends AppCompatActivity {
         RequestParams params=new RequestParams(mPath);
         params.addBodyParameter("req","login");
         params.addBodyParameter("password","123");
-        params.addBodyParameter("phone","123");
+        params.addBodyParameter("phone", "123");
         //第二步：开始请求，设置请求方式，同时实现回调函数
         x.http().post(params, new Callback.CommonCallback<String>() {
 

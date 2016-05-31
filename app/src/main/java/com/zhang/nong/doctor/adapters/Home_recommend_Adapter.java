@@ -18,10 +18,10 @@ import java.util.List;
  */
 public class Home_recommend_Adapter extends BaseAdapter {
 //
-Context mContext;
-List<Machine> mList;
+ Context mContext;
+private List<Machine> mList;
 //layoutinflater主要是用来初始化布局文件
-LayoutInflater mInflater;
+private LayoutInflater mInflater;
 
 public Home_recommend_Adapter(Context context,
                               List<Machine> list ) {

@@ -5,11 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.zhang.nong.R;
 
-public class Nearby_pro_advisory_Activity extends AppCompatActivity {
+public class Home_Nearby_pro_advisory_Activity extends AppCompatActivity {
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.nearby_pro_advisory);
+	setContentView(R.layout.home_nearby_pro_advisory);
 }
 }

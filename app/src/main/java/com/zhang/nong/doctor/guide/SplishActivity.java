@@ -26,7 +26,7 @@ private ImageView iv_mainview;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.activity_splish);
+	setContentView(R.layout.home_start_splish);
 	iv_mainview = (ImageView) findViewById(R.id.iv_splash_mainview);
 	startAnim();//开始播放动画
 	initEvent();//初始化事件
